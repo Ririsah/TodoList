@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Pixelify Sans";
+}
+
+body {
+  background: linear-gradient(300deg, #51ff00, #00ff95, #0084ff);
+  background-size: 180% 180%;
+  animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.container {
+  width: 80%;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fb6bcc;
+  padding: 10px;
+  border-radius: 3px;
+  border: 7px solid black;
+  margin-bottom: 20px;
+}
+
+.title-container > h1 {
+  font-size: 7rem;
+  text-shadow: rgb(0, 255, 255) -3px 3px 0,
+              rgb(255, 0, 0) 3px -3px 0;
+}
+
+.title-item-1 {
+  display: flex;
+  gap: 10px
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 7px solid black;
+}
+
+.title-item-2 {
+  background: url(./imagens/img6.png) center / cover;
+  height: 50px;
+  width: 100px;
+  border-radius: 3px;
+  border: 7px solid black;
+  padding: 40px;
+}
+
+.content-container {
+  display: flex;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 20px;
+  width: 50%;
+  height: 700px;
+}
+
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5,
+.item-6,
+.item-7,
+.item-8 {
+  border-radius: 3px;
+  border: 7px solid black;
+}
+
+.item-1 {
+  background: url(./imagens/img1.png) center / cover;
+}
+
+.item-2 {
+  background: url(./imagens/img2.png) center / cover;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.item-3 {
+  background: url(./imagens/img3.png) center / cover;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.item-4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  grid-column: span 2;
+  grid-row: span 3;
+  padding: 20px 30px;
+}
+
+.item-4 > h2 {
+  font-size: 4rem;
+  text-shadow: rgb(0, 255, 255) -2px 2px 0,
+                rgb(255, 0, 0) 2px -2px 0;
+}
+
+.item-4 > hr {
+  width: 98%;
+  border: 3px solid black;
+  margin-bottom: 20px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.filter > hr {
+  border: 3px solid black;
+  margin-top: 20px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.status > p,
+.order > p {
+  font-size: 2rem;
+}
+
+.status > select,
+.order > button {
+  border: 3px solid black;
+  border-radius: 3px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.status > select {
+  height: 40px;
+  padding: 0 10px;
+}
+
+.order > button {
+  background-color: #29abe2;
+  padding: 0 10px;
+}
+
+.order > .asc {
+  margin-right: 10px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.todo > hr {
+  border: 2px dashed black;
+  margin: 10px 0;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.complete,
+.remove {
+  border: 3px solid black;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  padding: 2px 7px;
+  cursor: pointer;
+}
+
+.complete {
+  margin-right: 15px;
+  background-color: #29abe2;
+}
+
+.remove {
+  background-color: #fb5d00;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template: 1fr 2fr 0.7fr / repeat(2, 1fr);
+  gap: 20px;
+  width: 50%;
+  height: 700px;
+  margin-left: 20px;
+}
+
+.item-5 {
+  background: url(./imagens/img4.png) center / cover;
+}
+
+.item-6 {
+  background: url(./imagens/img5.png) center / cover;
+}
+
+.item-7 {
+  background-color: #29abe2;
+  grid-column: span 2;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.todo-form > h2 {
+  font-size: 4rem;
+  text-shadow: rgb(0, 255, 255) -2px 2px 0,
+                rgb(255, 0, 0) 2px -2px 0;
+}
+
+form > input {
+  width: 97%;
+  border-radius: 3px;
+  border: 3px solid black;
+  font-size: 2rem;
+  padding: 15px 0 15px 10px;
+  margin: 20px 0;
+  outline: none;
+}
+
+.flex-form > select {
+  width: 70%;
+  border-radius: 3px;
+  border: 3px solid black;
+  font-size: 2rem;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.flex-form > button {
+  width: 28%;
+  background-color: #fb5d00;
+  border-radius: 3px;
+  border: 5px solid black;
+  font-size: 2rem;
+  padding: 15px 0px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.item-8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fb6bcc;
+  grid-row-start: 3;
+  grid-column: span 2;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search > input {
+  width: 90%;
+  border-radius: 3px;
+  border: 3px solid black;
+  font-size: 2rem;
+  padding: 5px 10px;
+  outline: none;
+}
+
+@media (max-width: 1700px) {
+  .content-container {
+      flex-direction: column;
+  }
+
+  .grid-1 {
+      width: 100%;
+  }
+
+  .grid-2 {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .title-container > h1 {
+      font-size: 5rem;
+  }
+
+  .title-item-1 {
+      flex-direction: column;
+  }
+
+  .circle {
+      height: 15px;
+      width: 15px;
+  }
+
+  .title-item-2 {
+      height: 10px;
+      width: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+      width: 90%;
+  }    
+}
+
+@media (max-width: 800px) {
+  .title-container > h1 {
+      font-size: 3rem;
+  }
+
+  .circle {
+      height: 5px;
+      width: 5px;
+  }
+
+  .title-item-2 {
+      height: 1px;
+      width: 20px;
+  }
+
+  .grid-1 {
+      grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+      height: 1000px;
+  }
+  
+  .item-1 {
+      grid-column-start: 1;
+      grid-row-start: 5;
+  }
+  
+  .item-2 {
+      grid-column-start: 2;
+      grid-row-start: 5;
+  }
+  
+  .item-3 {
+      grid-column-start: 3;
+      grid-row-start: 5;
+  }
+  
+  .item-4 {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      grid-column: span 3;
+      grid-row: span 4;
+  }  
+}
+
+@media (max-width: 628px) {
+  form > input {
+    width: 96%;
+  }
+
+  .flex-form > select {
+    width: 100%;
+  }
+  
+  .flex-form > button {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+
+
+
