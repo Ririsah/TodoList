@@ -1,3 +1,4 @@
+import './Todo.css';
 import React from "react";
 
 const Todo = ({ todo, removeTodo, completeTodo }) => {

@@ -1,0 +1,64 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.filter > hr {
+    border: 3px solid black;
+    margin-top: 20px;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.status > p,
+.order > p {
+    font-size: 2rem;
+}
+
+.status > select,
+.order > button {
+    border: 3px solid black;
+    border-radius: 3px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.status > select {
+    height: 40px;
+    padding: 0 10px;
+}
+
+.order > button {
+    background-color: #29abe2;
+    padding: 0 10px;
+}
+
+.order > button:hover {
+    transform: scale(1.07);
+    background: linear-gradient(300deg, #00ff88, #00eeff, #0084ff);
+    background-size: 180% 180%;
+    animation: gradient-animation 2s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.order > .asc {
+    margin-right: 10px;
+}

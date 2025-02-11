@@ -1,0 +1,61 @@
+.todo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.todo>hr {
+    border: 2px dashed black;
+    margin: 10px 0;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.complete,
+.remove {
+    border: 3px solid black;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    padding: 2px 7px;
+    cursor: pointer;
+}
+
+.complete {
+    margin-right: 15px;
+    background-color: #29abe2;
+}
+
+.remove {
+    background-color: #fb5d00;
+}
+
+.complete:hover,
+.remove:hover {
+    transform: scale(1.07);
+    background-size: 180% 180%;
+    animation: gradient-animation 2s ease infinite;
+}
+
+.complete:hover {
+    background: linear-gradient(300deg, #00ff88, #00eeff, #0084ff);
+}
+
+.remove:hover {
+    background: linear-gradient(300deg, #ff5e00, #ff9100, #ff0055);
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
