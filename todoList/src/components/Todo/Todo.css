@@ -59,3 +59,10 @@
         background-position: 0% 50%;
     }
 }
+
+@media (max-width: 700px) {
+    .complete,
+    .remove {
+        padding: 2px 2px;
+    }
+}

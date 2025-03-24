@@ -81,7 +81,7 @@ function App() {
             <div class="item-2"></div>
             <div class="item-3"></div>
             <div class="item-4">
-              <h2>to do list:</h2>
+              <h2>Task planner:</h2>
               <hr />
               <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
               {todos
